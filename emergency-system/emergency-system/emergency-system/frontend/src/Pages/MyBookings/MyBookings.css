@@ -1,0 +1,391 @@
+.my-bookings-page {
+  padding: 40px 24px;
+  min-height: 80vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+
+.my-bookings-header {
+  margin-bottom: 32px;
+  border-bottom: 2px solid #f1f3f5;
+  padding-bottom: 16px;
+}
+
+.my-bookings-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #1a1a1a;
+}
+
+.my-bookings-header p {
+  color: #6c757d;
+  margin-top: 8px;
+}
+
+.my-bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.my-booking-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 14px;
+  padding: 20px;
+  border-left: 5px solid #fcc419;
+}
+
+.my-booking-card.status-verified,
+.my-booking-card.status-accepted {
+  border-left-color: #40c057;
+}
+
+.my-booking-card.status-rejected {
+  border-left-color: #fa5252;
+}
+
+.my-booking-card.status-completed {
+  border-left-color: #40c057;
+}
+
+.my-booking-card h3 {
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.my-booking-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #495057;
+}
+
+.booking-status-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.booking-status-badge.pending {
+  background: #fff9db;
+  color: #f08c00;
+}
+
+.booking-status-badge.verified,
+.booking-status-badge.accepted {
+  background: #ebfbee;
+  color: #2f9e44;
+}
+
+.booking-status-badge.cancelled {
+  background: #f1f3f5;
+  color: #495057;
+}
+
+.booking-status-badge.rejected {
+  background: #fff5f5;
+  color: #e03131;
+}
+
+.booking-status-badge.completed {
+  background: #ebfbee;
+  color: #2f9e44;
+}
+
+.my-booking-actions {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #e9ecef;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.live-track-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #1971c2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.cancel-booking-btn {
+  background: transparent;
+  color: #c92a2a;
+  border: 1px solid #ffc9c9;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.give-review-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.reviewed-badge {
+  color: #2f9e44;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.my-bookings-empty {
+  text-align: center;
+  padding: 48px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px dashed #dee2e6;
+}
+
+.my-bookings-waiting {
+  background: #fff9db;
+  color: #856404;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.my-bookings-hint {
+  font-size: 14px;
+  color: #6c757d;
+  max-width: 420px;
+  margin: 12px auto 0;
+}
+
+.my-bookings-empty button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .my-bookings-page {
+    padding: 20px 12px;
+  }
+
+  .my-bookings-header {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .my-bookings-header h2 {
+    font-size: 20px;
+  }
+
+  .my-bookings-header p {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+
+  .my-bookings-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .my-booking-card {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .my-booking-card h3 {
+    font-size: 16px;
+  }
+
+  .my-booking-card p {
+    font-size: 12px;
+  }
+
+  .booking-status-badge {
+    padding: 3px 8px;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+  .my-booking-actions {
+    margin-top: 10px;
+    padding-top: 10px;
+    gap: 8px;
+  }
+
+  .live-track-link,
+  .cancel-booking-btn,
+  .give-review-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .my-bookings-empty {
+    padding: 30px 15px;
+  }
+
+  .my-bookings-empty button {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .my-bookings-page {
+    padding: 25px 13px;
+  }
+
+  .my-bookings-header {
+    margin-bottom: 22px;
+    padding-bottom: 13px;
+  }
+
+  .my-bookings-header h2 {
+    font-size: 22px;
+  }
+
+  .my-bookings-header p {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+
+  .my-bookings-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .my-booking-card {
+    padding: 16px;
+    border-radius: 11px;
+  }
+
+  .my-booking-card h3 {
+    font-size: 17px;
+  }
+
+  .my-booking-card p {
+    font-size: 13px;
+  }
+
+  .booking-status-badge {
+    padding: 4px 9px;
+    font-size: 11px;
+    margin-top: 11px;
+  }
+
+  .my-booking-actions {
+    margin-top: 11px;
+    padding-top: 11px;
+    gap: 8px;
+  }
+
+  .live-track-link,
+  .cancel-booking-btn,
+  .give-review-btn {
+    padding: 7px 13px;
+    font-size: 12px;
+  }
+
+  .my-bookings-empty {
+    padding: 35px 16px;
+  }
+
+  .my-bookings-empty button {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .my-bookings-page {
+    padding: 30px 15px;
+  }
+
+  .my-bookings-header {
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+  }
+
+  .my-bookings-header h2 {
+    font-size: 24px;
+  }
+
+  .my-bookings-header p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .my-bookings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 18px;
+  }
+
+  .my-booking-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .my-booking-card h3 {
+    font-size: 18px;
+  }
+
+  .my-booking-card p {
+    font-size: 14px;
+  }
+
+  .booking-status-badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .my-booking-actions {
+    margin-top: 12px;
+    padding-top: 12px;
+    gap: 9px;
+  }
+
+  .live-track-link,
+  .cancel-booking-btn,
+  .give-review-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .my-bookings-empty {
+    padding: 40px 20px;
+  }
+
+  .my-bookings-empty button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Tablets and up */
+@media (min-width: 571px) {
+  .my-bookings-page {
+    max-width: 1100px;
+  }
+}

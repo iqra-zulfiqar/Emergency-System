@@ -1,0 +1,18 @@
+.env
+node_modules
+
+# Files jo upload hoti hain (Very Important!)
+uploads/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Build folder (agar aap backend ko compile kar rahe hon)
+dist/
+build/

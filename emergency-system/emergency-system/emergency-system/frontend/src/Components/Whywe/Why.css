@@ -1,0 +1,129 @@
+.why-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.why-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0647ff;   /* blue color */
+  margin-bottom: 25px;
+}
+
+.why-list {
+  list-style: none;   /* remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 18px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.why-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+.why-icon {
+  font-size: 28px;
+  color: #0647ff;
+  min-width: 32px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .why-container {
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .why-title {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .why-item {
+    gap: 10px;
+    padding: 12px 14px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+
+  .why-icon {
+    font-size: 22px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .why-container {
+    max-width: 95%;
+    margin: 35px auto;
+    padding: 16px;
+  }
+
+  .why-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .why-item {
+    gap: 12px;
+    padding: 14px 16px;
+    margin: 11px 0;
+    font-size: 14px;
+  }
+
+  .why-icon {
+    font-size: 24px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .why-container {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 18px;
+  }
+
+  .why-title {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  .why-item {
+    gap: 13px;
+    padding: 16px 18px;
+    margin: 12px 0;
+    font-size: 15px;
+  }
+
+  .why-icon {
+    font-size: 26px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .why-container {
+    max-width: 800px;
+  }
+}

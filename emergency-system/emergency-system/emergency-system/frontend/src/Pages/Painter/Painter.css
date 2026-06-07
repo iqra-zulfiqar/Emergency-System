@@ -1,0 +1,338 @@
+/* Main Page */
+.paint-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO SECTION */
+.paint-hero {
+    height: 350px;
+    background: linear-gradient(135deg, #f59e0b, #f97316); /* nice painter gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.paint-hero h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.paint-hero p {
+    font-size: 18px;
+    color: white;
+}
+
+/* SECTION */
+.paint-section {
+    margin-bottom: 50px;
+}
+
+.paint-section h2 {
+    color: #b45309; /* darker shade for headings */
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.paint-section p {
+    color: #444;
+    line-height: 1.8;
+}
+
+/* BENEFITS GRID / CARDS */
+.paint-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.benefit-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.benefit-box:hover {
+    transform: translateY(-8px);
+}
+
+/* PROCESS GRID */
+.paint-process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paint-process div {
+    background: #f7fbff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* CTA SECTION */
+.paint-cta {
+    background: #f97316;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.paint-cta h2 {
+    margin-bottom: 10px;
+}
+
+/* -------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------- */
+
+/* Tablet */
+@media(max-width:992px) {
+    .paint-benefits,
+    .paint-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .paint-hero h1 {
+        font-size: 34px;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px) {
+    .paint-benefits,
+    .paint-process {
+        grid-template-columns: 1fr;
+    }
+
+    .paint-hero {
+        height: 260px;
+    }
+
+    .paint-hero h1 {
+        font-size: 26px;
+    }
+
+    .paint-hero p {
+        font-size: 14px;
+    }
+
+    .paint-section h2 {
+        font-size: 22px;
+    }
+}
+
+/* ================= EXTRA MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+    .paint-page {
+        width: 95%;
+    }
+
+    .paint-hero {
+        height: 220px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+
+    .paint-hero h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .paint-hero p {
+        font-size: 12px;
+    }
+
+    .paint-section {
+        margin-bottom: 30px;
+    }
+
+    .paint-section h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .paint-benefits,
+    .paint-process {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .benefit-box {
+        padding: 18px;
+    }
+
+    .benefit-box h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .paint-process div {
+        padding: 16px;
+    }
+
+    .paint-cta {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .paint-cta h2 {
+        font-size: 18px;
+    }
+
+    .paint-cta p {
+        font-size: 13px;
+    }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .paint-page {
+        width: 95%;
+    }
+
+    .paint-hero {
+        height: 260px;
+        margin-top: 18px;
+        margin-bottom: 30px;
+        padding: 17px;
+    }
+
+    .paint-hero h1 {
+        font-size: 22px;
+        margin-bottom: 9px;
+    }
+
+    .paint-hero p {
+        font-size: 13px;
+    }
+
+    .paint-section {
+        margin-bottom: 32px;
+    }
+
+    .paint-section h2 {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    .paint-benefits,
+    .paint-process {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .benefit-box {
+        padding: 20px;
+    }
+
+    .benefit-box h3 {
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+
+    .paint-process div {
+        padding: 18px;
+    }
+
+    .paint-cta {
+        padding: 28px;
+        margin-bottom: 28px;
+    }
+
+    .paint-cta h2 {
+        font-size: 20px;
+    }
+
+    .paint-cta p {
+        font-size: 14px;
+    }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+    .paint-page {
+        width: 95%;
+    }
+
+    .paint-hero {
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+        padding: 18px;
+    }
+
+    .paint-hero h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .paint-hero p {
+        font-size: 15px;
+    }
+
+    .paint-section {
+        margin-bottom: 35px;
+    }
+
+    .paint-section h2 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .paint-benefits,
+    .paint-process {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 18px;
+    }
+
+    .benefit-box {
+        padding: 22px;
+    }
+
+    .benefit-box h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .paint-process div {
+        padding: 20px;
+    }
+
+    .paint-cta {
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .paint-cta h2 {
+        font-size: 22px;
+    }
+
+    .paint-cta p {
+        font-size: 15px;
+    }
+}

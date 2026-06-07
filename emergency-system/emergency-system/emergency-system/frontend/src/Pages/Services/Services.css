@@ -1,0 +1,169 @@
+.services-container {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* ONE CARD PER ROW */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* BIG CARD DESIGN */
+.service-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.service-card h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .services-container {
+    padding: 30px 10px;
+  }
+
+  .services-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .service-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .services-container {
+    padding: 35px 12px;
+  }
+
+  .services-title {
+    font-size: 26px;
+    margin-bottom: 9px;
+  }
+
+  .services-subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  .service-card {
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+
+  .service-card h2 {
+    font-size: 22px;
+    margin-bottom: 13px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .services-container {
+    padding: 40px 15px;
+  }
+
+  .services-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .services-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+  }
+
+  .service-card h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .service-card p {
+    font-size: 16px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) and (max-width: 900px) {
+  .services-container {
+    padding: 50px 20px;
+  }
+
+  .services-title {
+    font-size: 36px;
+  }
+
+  .service-card {
+    padding: 35px;
+  }
+
+  .service-card h2 {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,226 @@
+.services-section {
+  padding: 60px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARD */
+.service-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  padding-bottom: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.service-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  padding: 0 15px;
+}
+
+/* BUTTON */
+.service-card button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #0647ff;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-card button:hover {
+  background: #0647ff;
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title {
+    font-size: 26px;
+  }
+}
+
+/* ================= ENHANCED MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .services-section {
+    padding: 30px 12px;
+  }
+
+  .services-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding-bottom: 16px;
+  }
+
+  .service-card img {
+    height: 140px;
+  }
+
+  .service-card h3 {
+    margin: 12px 0 8px;
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .service-card button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .services-section {
+    padding: 35px 13px;
+  }
+
+  .services-title {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .service-card {
+    padding-bottom: 17px;
+  }
+
+  .service-card img {
+    height: 150px;
+  }
+
+  .service-card h3 {
+    margin: 13px 0 9px;
+    font-size: 17px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    padding: 0 13px;
+  }
+
+  .service-card button {
+    margin-top: 13px;
+    padding: 9px 15px;
+    font-size: 13px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+
+  .services-title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .service-card {
+    padding-bottom: 18px;
+  }
+
+  .service-card img {
+    height: 160px;
+  }
+
+  .service-card h3 {
+    margin: 14px 0 10px;
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    padding: 0 14px;
+  }
+
+  .service-card button {
+    margin-top: 14px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+}

@@ -1,0 +1,387 @@
+.content-container {
+  padding: 40px;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.content-container .page-header {
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f1f3f5;
+  padding-bottom: 20px;
+}
+
+.content-container .page-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.content-container .page-header p {
+  color: #6c757d;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.content-container .page-header .request-count {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.content-container .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.content-container .cards-grid .user-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.content-container .cards-grid .user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.content-container .cards-grid .user-card.pending-card {
+  border-left: 5px solid #f39c12;
+}
+
+.content-container .cards-grid .user-card .status-badge {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background-color: #fffff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.content-container .cards-grid .user-card .user-details {
+  margin-bottom: 15px;
+  padding-right: 40px;
+}
+
+.content-container .cards-grid .user-card .user-details h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.content-container .cards-grid .user-card .user-details p {
+  color: #495057;
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.content-container .cards-grid .user-card .user-details p.phone-text {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.content-container .cards-grid .user-card .user-details p.location-text {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+.content-container .cards-grid .user-card .user-details p.timing-text {
+  color: #9b59b6;
+  font-weight: 500;
+}
+
+.content-container .cards-grid .user-card .actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #f1f3f5;
+  position: relative;
+  z-index: 10;
+}
+
+.content-container .cards-grid .user-card .actions button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.content-container .cards-grid .user-card .actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-container .cards-grid .user-card .actions button:active {
+  transform: translateY(0);
+}
+
+.content-container .cards-grid .user-card .actions button.approve-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.content-container .cards-grid .user-card .actions button.approve-btn:hover {
+  background-color: #229954;
+}
+
+.content-container .cards-grid .user-card .actions button.reject-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.content-container .cards-grid .user-card .actions button.reject-btn:hover {
+  background-color: #c0392b;
+}
+
+.content-container .no-data {
+  text-align: center;
+  color: #95a5a6;
+  font-size: 16px;
+  grid-column: 1 / -1;
+  padding: 40px 20px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .content-container {
+    padding: 20px;
+  }
+
+  .content-container .page-header {
+    margin-bottom: 20px;
+  }
+
+  .content-container .page-header h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header p {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header .request-count {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .content-container .cards-grid .user-card {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
+  .content-container .cards-grid .user-card .status-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details p {
+    font-size: 12px;
+    margin: 6px 0;
+  }
+
+  .content-container .cards-grid .user-card .actions {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .content-container .cards-grid .user-card .actions button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .content-container .no-data {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .content-container {
+    padding: 22px;
+  }
+
+  .content-container .page-header {
+    margin-bottom: 22px;
+  }
+
+  .content-container .page-header h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header p {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header .request-count {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .content-container .cards-grid .user-card {
+    padding: 18px;
+    padding-top: 40px;
+  }
+
+  .content-container .cards-grid .user-card .status-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details p {
+    font-size: 13px;
+    margin: 7px 0;
+  }
+
+  .content-container .cards-grid .user-card .actions {
+    gap: 11px;
+    margin-top: 18px;
+  }
+
+  .content-container .cards-grid .user-card .actions button {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .content-container .no-data {
+    font-size: 15px;
+    margin-top: 35px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .content-container {
+    padding: 28px;
+  }
+
+  .content-container .page-header {
+    margin-bottom: 26px;
+  }
+
+  .content-container .page-header h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .content-container .page-header .request-count {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .content-container .cards-grid .user-card {
+    padding: 20px;
+    padding-top: 45px;
+  }
+
+  .content-container .cards-grid .user-card .status-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .content-container .cards-grid .user-card .user-details p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .content-container .cards-grid .user-card .actions {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .content-container .cards-grid .user-card .actions button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .content-container .no-data {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .content-container {
+    padding: 40px;
+  }
+}

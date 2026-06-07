@@ -1,0 +1,252 @@
+/* Page Background */
+.booking-container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+}
+
+/* Title */
+.booking-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+/* Cards Layout */
+.booking-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Card Style */
+.booking-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.35s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Animation */
+.booking-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* Click Animation */
+.booking-card:active {
+  transform: scale(0.97);
+}
+
+/* Headings */
+.booking-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Description */
+.booking-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.book-btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: #0056b3;
+}
+
+/* Color Themes */
+.urgent {
+  border-top: 6px solid #ff3b3b;
+}
+
+.one-hour {
+  border-top: 6px solid #ffb400;
+}
+
+.later {
+  border-top: 6px solid #28c76f;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .booking-title {
+    font-size: 28px;
+  }
+
+  .booking-card {
+    width: 280px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .booking-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-card {
+    width: 95%;
+    max-width: 420px;
+  }
+
+  .booking-title {
+    font-size: 24px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .booking-container {
+    padding: 40px 15px;
+  }
+
+  .booking-card {
+    padding: 25px 18px;
+  }
+
+  .booking-card h3 {
+    font-size: 20px;
+  }
+
+  .booking-card p {
+    font-size: 14px;
+  }
+}
+
+/* ================= ENHANCED MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .booking-container {
+    padding: 30px 10px;
+  }
+
+  .booking-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .booking-cards {
+    gap: 15px;
+  }
+
+  .booking-card {
+    width: 95%;
+    max-width: 100%;
+    padding: 18px 14px;
+  }
+
+  .booking-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .booking-card p {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .book-btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .booking-container {
+    padding: 40px 12px;
+  }
+
+  .booking-title {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
+
+  .booking-cards {
+    gap: 16px;
+  }
+
+  .booking-card {
+    width: 95%;
+    max-width: 100%;
+    padding: 20px 16px;
+  }
+
+  .booking-card h3 {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+
+  .booking-card p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .book-btn {
+    padding: 11px 17px;
+    font-size: 13px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .booking-container {
+    padding: 45px 14px;
+  }
+
+  .booking-title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .booking-cards {
+    gap: 18px;
+  }
+
+  .booking-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 24px 18px;
+  }
+
+  .booking-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .booking-card p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .book-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

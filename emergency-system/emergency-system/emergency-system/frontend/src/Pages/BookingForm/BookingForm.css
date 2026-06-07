@@ -1,0 +1,330 @@
+/* .form-container {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.exit-btn {
+  border: none;
+  background: #dc3545;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.exit-btn:hover {
+  background: #b52a37;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+.success-msg {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.exit-btn {
+  border: none;
+  background: #dc3545;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.exit-btn:hover {
+  background: #b52a37;
+}
+
+.error-msg {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+@media(max-width:768px){
+  .form-container{
+    margin: 30px 15px;
+    padding: 25px;
+  }
+} */
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+
+  .exit-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+
+    &:hover { color: #e63946; }
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: -10px; /* Label ko input ke qareeb karne ke liye */
+    }
+
+    input, select {
+      padding: 12px 15px;
+      border: 1.5px solid #eee;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.3s ease;
+      background: #fdfdfd;
+
+      &:focus {
+        border-color: #e63946; /* Emergency Red focus */
+        box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
+      }
+    }
+
+    .error-msg {
+      color: #e63946;
+      font-size: 12px;
+      margin-top: -10px;
+      font-weight: 500;
+    }
+
+    .submit-btn {
+      margin-top: 10px;
+      padding: 14px;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #e63946; /* Hovers to Emergency Red */
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+      }
+
+      &:active { transform: translateY(0); }
+    }
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .form-container {
+    margin: 25px 10px;
+    padding: 18px;
+    max-width: 100%;
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .exit-btn {
+      font-size: 12px;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+    }
+
+    form {
+      gap: 12px;
+
+      label {
+        font-size: 12px;
+        margin-bottom: -8px;
+      }
+
+      input, select {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .error-msg {
+        font-size: 11px;
+        margin-top: -8px;
+      }
+
+      .submit-btn {
+        padding: 11px;
+        font-size: 13px;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .form-container {
+    margin: 30px 12px;
+    padding: 20px;
+    max-width: 100%;
+
+    h2 {
+      font-size: 19px;
+      margin-bottom: 19px;
+    }
+
+    .exit-btn {
+      font-size: 13px;
+      margin-bottom: 13px;
+      padding: 7px 11px;
+    }
+
+    form {
+      gap: 13px;
+
+      label {
+        font-size: 13px;
+        margin-bottom: -9px;
+      }
+
+      input, select {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      .error-msg {
+        font-size: 12px;
+        margin-top: -9px;
+      }
+
+      .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .form-container {
+    margin: 35px 15px;
+    padding: 24px;
+    max-width: 100%;
+
+    h2 {
+      font-size: 21px;
+      margin-bottom: 21px;
+    }
+
+    .exit-btn {
+      font-size: 13px;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+    }
+
+    form {
+      gap: 14px;
+
+      label {
+        font-size: 13px;
+        margin-bottom: -10px;
+      }
+
+      input, select {
+        padding: 11px 13px;
+        font-size: 15px;
+      }
+
+      .error-msg {
+        font-size: 12px;
+        margin-top: -10px;
+      }
+
+      .submit-btn {
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+/* Tablets and up */
+@media (min-width: 571px) {
+  .form-container {
+    max-width: 500px;
+  }
+}

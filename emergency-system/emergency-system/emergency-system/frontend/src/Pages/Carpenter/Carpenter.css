@@ -1,0 +1,368 @@
+/* Main Page */
+.service-page{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO SECTION */
+.service-hero{
+    height: 350px;
+    background: linear-gradient(135deg,#0f4c81,#00a8cc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.hero-content{
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-content p{
+    font-size: 18px;
+}
+
+/* SECTION */
+.service-section{
+    margin-bottom: 50px;
+}
+
+.service-section h2{
+    color: #0f4c81;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.service-section p{
+    color: #444;
+    line-height: 1.8;
+}
+
+/* SERVICE GRID */
+.service-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.service-card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-8px);
+}
+
+.service-card h3{
+    color: #0f4c81;
+    margin-bottom: 10px;
+}
+
+/* PROCESS */
+.process-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.process-box{
+    flex: 1;
+    min-width: 200px;
+    background: #f7fbff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.process-box span{
+    font-size: 30px;
+    font-weight: bold;
+    color: #00a8cc;
+}
+
+/* EMERGENCY SECTION */
+.service-emergency{
+    background: #0f4c81;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+/* -------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------- */
+
+/* Tablet */
+@media(max-width:992px){
+
+.service-grid{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.hero-content h1{
+    font-size: 34px;
+}
+
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+.service-grid{
+    grid-template-columns: 1fr;
+}
+
+.service-hero{
+    height: 260px;
+}
+
+.hero-content h1{
+    font-size: 26px;
+}
+
+.hero-content p{
+    font-size: 14px;
+}
+
+.service-section h2{
+    font-size: 22px;
+}
+
+}
+
+/* ================= EXTRA MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+    .service-page{
+        width: 95%;
+    }
+
+    .service-hero{
+        height: 220px;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        padding: 15px;
+    }
+
+    .hero-content h1{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content p{
+        font-size: 12px;
+    }
+
+    .service-section{
+        margin-bottom: 30px;
+    }
+
+    .service-section h2{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .service-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card{
+        padding: 18px;
+    }
+
+    .service-card h3{
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .process-container{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .process-box{
+        min-width: auto;
+        padding: 16px;
+    }
+
+    .process-box span{
+        font-size: 24px;
+    }
+
+    .service-emergency{
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .service-emergency h2{
+        font-size: 18px;
+    }
+
+    .service-emergency p{
+        font-size: 13px;
+    }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .service-page{
+        width: 95%;
+    }
+
+    .service-hero{
+        height: 260px;
+        margin-top: 18px;
+        margin-bottom: 30px;
+        padding: 17px;
+    }
+
+    .hero-content h1{
+        font-size: 22px;
+        margin-bottom: 9px;
+    }
+
+    .hero-content p{
+        font-size: 13px;
+    }
+
+    .service-section{
+        margin-bottom: 32px;
+    }
+
+    .service-section h2{
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    .service-grid{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-card{
+        padding: 20px;
+    }
+
+    .service-card h3{
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+
+    .process-container{
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .process-box{
+        min-width: auto;
+        padding: 18px;
+    }
+
+    .process-box span{
+        font-size: 26px;
+    }
+
+    .service-emergency{
+        padding: 28px;
+        margin-bottom: 28px;
+    }
+
+    .service-emergency h2{
+        font-size: 20px;
+    }
+
+    .service-emergency p{
+        font-size: 14px;
+    }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+    .service-page{
+        width: 95%;
+    }
+
+    .service-hero{
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 35px;
+        padding: 18px;
+    }
+
+    .hero-content h1{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p{
+        font-size: 15px;
+    }
+
+    .service-section{
+        margin-bottom: 35px;
+    }
+
+    .service-section h2{
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .service-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .service-card{
+        padding: 22px;
+    }
+
+    .service-card h3{
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .process-container{
+        flex-direction: row;
+        gap: 14px;
+    }
+
+    .process-box{
+        min-width: 150px;
+        padding: 20px;
+    }
+
+    .process-box span{
+        font-size: 28px;
+    }
+
+    .service-emergency{
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+    .service-emergency h2{
+        font-size: 22px;
+    }
+
+    .service-emergency p{
+        font-size: 15px;
+    }
+}

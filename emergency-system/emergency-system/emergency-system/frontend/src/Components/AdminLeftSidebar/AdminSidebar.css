@@ -1,0 +1,207 @@
+.sidebar-con {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: #111; /* Sleek Dark Theme */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+
+  /* Logo Section Nesting */
+  .logo {
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 15px;
+      cursor: pointer;
+    }
+  }
+
+  /* Navigation Links Nesting */
+  .user-req {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .sidebar-link {
+      color: #b3b3b3;
+      text-decoration: none;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #222;
+        color: white;
+        padding-left: 20px; /* Subtle slide effect */
+      }
+    }
+  }
+
+  /* Logout Section Styling */
+  .logout-section {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+
+    .logout-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px; /* 20px was too big for sidebar, 16px is standard */
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(230, 57, 70, 0.2);
+
+      &:hover {
+        background-color: #ff4d5a;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(230, 57, 70, 0.2);
+      }
+    }
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .sidebar-con {
+    height: auto;
+    padding: 15px;
+
+    .logo {
+      h1 {
+        font-size: 18px;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .user-req {
+      gap: 8px;
+
+      .sidebar-link {
+        padding: 9px 12px;
+        font-size: 13px;
+
+        &:hover {
+          padding-left: 16px;
+        }
+      }
+    }
+
+    .logout-section {
+      padding-top: 16px;
+
+      .logout-btn {
+        padding: 10px;
+        font-size: 13px;
+        gap: 8px;
+      }
+    }
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .sidebar-con {
+    height: auto;
+    padding: 16px;
+
+    .logo {
+      h1 {
+        font-size: 19px;
+        margin-bottom: 28px;
+        padding-bottom: 13px;
+      }
+    }
+
+    .user-req {
+      gap: 9px;
+
+      .sidebar-link {
+        padding: 10px 13px;
+        font-size: 14px;
+
+        &:hover {
+          padding-left: 18px;
+        }
+      }
+    }
+
+    .logout-section {
+      padding-top: 18px;
+
+      .logout-btn {
+        padding: 11px;
+        font-size: 14px;
+        gap: 8px;
+      }
+    }
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .sidebar-con {
+    height: auto;
+    padding: 18px;
+
+    .logo {
+      h1 {
+        font-size: 20px;
+        margin-bottom: 32px;
+        padding-bottom: 14px;
+      }
+    }
+
+    .user-req {
+      gap: 10px;
+
+      .sidebar-link {
+        padding: 11px 14px;
+        font-size: 15px;
+
+        &:hover {
+          padding-left: 19px;
+        }
+      }
+    }
+
+    .logout-section {
+      padding-top: 20px;
+
+      .logout-btn {
+        padding: 12px;
+        font-size: 15px;
+        gap: 9px;
+      }
+    }
+  }
+}
+
+/* Tablets and up */
+@media (min-width: 571px) {
+  .sidebar-con {
+    height: 100vh;
+  }
+}

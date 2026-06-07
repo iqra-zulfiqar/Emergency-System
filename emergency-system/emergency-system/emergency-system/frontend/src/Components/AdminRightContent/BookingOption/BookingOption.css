@@ -1,0 +1,738 @@
+.booking-option {
+  padding: 40px;
+  background-color: #fcfcfc;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+
+  .provider-gps-hint {
+    margin: 0 0 16px;
+    padding: 12px 16px;
+    background: #e7f5ff;
+    border-radius: 8px;
+    color: #1864ab;
+    font-size: 14px;
+  }
+
+  .page-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f1f3f5;
+    padding-bottom: 20px;
+
+    h2 {
+      font-size: 28px;
+      color: #1a1a1a;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: #6c757d;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+  }
+
+  .filter-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    button {
+      padding: 10px 24px;
+      border: 1px solid #e9ecef;
+      background-color: #ffffff;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      color: #495057;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+      &:hover {
+        background-color: #f8f9fa;
+        border-color: #dee2e6;
+        transform: translateY(-1px);
+      }
+
+      &.active {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border-color: #1a1a1a;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  .review-test-mode-banner {
+    background: #fff3bf;
+    color: #862e00;
+    border: 1px solid #ffe066;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+
+    code {
+      background: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+  }
+
+  .simple-admin-hint {
+    color: #495057;
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .pending-actions-panel {
+    background: #fff9db;
+    border: 2px solid #ffe066;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 32px;
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #862e00;
+    }
+
+    .pending-panel-note {
+      margin: 0 0 20px;
+      font-size: 14px;
+      color: #664d03;
+    }
+  }
+
+  .filtered-bookings-title {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #495057;
+  }
+
+  .booking-count-bar {
+    font-size: 14px;
+    color: #495057;
+    margin: 0 0 12px;
+  }
+
+  .active-filters-warning {
+    background: #fff9db;
+    color: #856404;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+
+    button {
+      margin-left: 8px;
+      background: transparent;
+      border: none;
+      color: #e03131;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .pending-varified {
+    display: flex;
+    gap: 8px;
+    background: #f1f3f5;
+    padding: 6px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      background: transparent;
+      color: #495057;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex: 1;
+      min-width: fit-content;
+
+      &.active-status {
+        background-color: #ffffff;
+        color: #e63946;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      &:hover:not(.active-status) {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+
+    .user-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      padding: 14px 16px;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+      }
+
+      &.pending-border {
+        border-left: 6px solid #fcc419;
+      }
+      &.approved-border {
+        border-left: 6px solid #40c057;
+      }
+
+      .user-details {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        h3 {
+          margin: 0 0 4px 0;
+          font-size: 16px;
+          color: #212529;
+          text-transform: capitalize;
+        }
+
+        p {
+          margin: 2px 0;
+          font-size: 13px;
+          color: #495057;
+
+          strong {
+            color: #212529;
+          }
+        }
+
+        .cv-container {
+          margin: 8px 0 4px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+
+          .timing-badge {
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 800;
+
+            &.urgent {
+              background: #fff5f5;
+              color: #fa5252;
+            }
+            &.thirty-min {
+              background: #e7f5ff;
+              color: #228be6;
+            }
+            &.two-days {
+              background: #fff9db;
+              color: #fab005;
+            }
+          }
+
+          .status-tag {
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &.pending {
+              background: #fff9db;
+              color: #f08c00;
+            }
+            &.verified,
+            &.accepted {
+              background: #ebfbee;
+              color: #2f9e44;
+            }
+            &.rejected,
+            &.cancelled {
+              background: #fff5f5;
+              color: #c92a2a;
+            }
+            &.completed {
+              background: #ebfbee;
+              color: #2f9e44;
+            }
+          }
+        }
+
+        .status-tag {
+          font-size: 10px;
+          padding: 3px 8px;
+          border-radius: 4px;
+          font-weight: 700;
+          text-transform: uppercase;
+          align-self: flex-start;
+
+          &.pending {
+            background: #fff9db;
+            color: #f08c00;
+          }
+          &.verified,
+          &.accepted {
+            background: #ebfbee;
+            color: #2f9e44;
+          }
+          &.rejected,
+          &.cancelled {
+            background: #fff5f5;
+            color: #c92a2a;
+          }
+          &.completed {
+            background: #ebfbee;
+            color: #2f9e44;
+          }
+        }
+
+        .card-footer {
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px dashed #e9ecef;
+
+          .card-footer-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            width: 100%;
+          }
+
+          .badge {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2f9e44;
+
+            &.pending-badge {
+              color: #f08c00;
+            }
+          }
+
+          .verify-action-btn,
+          .reject-action-btn,
+          .complete-action-btn {
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            text-align: center;
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+          }
+
+          .verify-action-btn {
+            background: #ebfbee;
+            color: #2f9e44;
+          }
+
+          .reject-action-btn {
+            background: #fff5f5;
+            color: #c92a2a;
+          }
+
+          .complete-action-btn {
+            background: #1a1a1a;
+            color: #ffffff;
+          }
+
+          .test-complete-action-btn {
+            background: #e67700;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+
+            &:hover {
+              background: #d9480f;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .booking-fetch-error {
+    background: #fff5f5;
+    color: #c92a2a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .no-data {
+    text-align: center;
+    color: #495057;
+    grid-column: 1 / -1;
+    padding: 40px 24px;
+    font-size: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px dashed #dee2e6;
+
+    p {
+      margin: 8px 0;
+    }
+  }
+
+  .no-data-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .reset-filter-btn {
+    padding: 10px 20px;
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+
+    &.secondary {
+      background: #e63946;
+    }
+  }
+
+  .footer-step-note {
+    font-size: 12px;
+    color: #868e96;
+    margin: 0;
+  }
+
+  .provider-reviews-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 2px solid #f1f3f5;
+
+    h3 {
+      margin: 0 0 4px;
+      font-size: 22px;
+    }
+
+    .reviews-avg {
+      color: #6c757d;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .no-reviews-inline {
+      color: #adb5bd;
+    }
+
+    .reviews-inline-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .review-inline-card {
+      background: #fff;
+      border: 1px solid #e9ecef;
+      border-radius: 10px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+
+      strong {
+        font-size: 14px;
+        color: #212529;
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      span {
+        color: #fab005;
+        font-size: 13px;
+        margin: 0;
+        margin-left: 0;
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 0;
+        color: #495057;
+        font-size: 13px;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .booking-option {
+    padding: 20px;
+
+    .provider-gps-hint {
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      font-size: 12px;
+    }
+
+    .page-header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 12px;
+        margin-top: 6px;
+      }
+    }
+
+    .filter-group {
+      gap: 8px;
+      margin-bottom: 16px;
+
+      button {
+        padding: 8px 16px;
+        font-size: 12px;
+      }
+    }
+
+    .review-test-mode-banner {
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+
+    .simple-admin-hint {
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .pending-actions-panel {
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .pending-varified {
+      gap: 4px;
+      padding: 4px;
+      margin-bottom: 24px;
+
+      button {
+        padding: 7px 10px;
+        font-size: 11px;
+      }
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+
+      .user-card {
+        padding: 12px 14px;
+
+        .user-details {
+          h3 {
+            font-size: 14px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+          .verify-action-btn,
+          .reject-action-btn,
+          .complete-action-btn,
+          .test-complete-action-btn {
+            padding: 7px 12px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .reset-filter-btn {
+      padding: 9px 16px;
+      font-size: 12px;
+    }
+
+    .provider-reviews-section {
+      margin-top: 32px;
+      padding-top: 20px;
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .booking-option {
+    padding: 22px;
+
+    .provider-gps-hint {
+      margin-bottom: 14px;
+      padding: 11px 13px;
+      font-size: 13px;
+    }
+
+    .page-header {
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 13px;
+        margin-top: 7px;
+      }
+    }
+
+    .filter-group {
+      gap: 9px;
+      margin-bottom: 18px;
+
+      button {
+        padding: 9px 18px;
+        font-size: 13px;
+      }
+    }
+
+    .pending-varified {
+      gap: 4px;
+      padding: 5px;
+      margin-bottom: 28px;
+
+      button {
+        padding: 7px 12px;
+        font-size: 12px;
+      }
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+
+      .user-card {
+        padding: 12px 14px;
+      }
+    }
+
+    .provider-reviews-section {
+      margin-top: 36px;
+      padding-top: 24px;
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .booking-option {
+    padding: 28px;
+
+    .provider-gps-hint {
+      margin-bottom: 16px;
+      padding: 12px 15px;
+      font-size: 14px;
+    }
+
+    .page-header {
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    }
+
+    .pending-varified {
+      gap: 6px;
+      padding: 5px;
+      margin-bottom: 32px;
+
+      button {
+        padding: 8px 14px;
+        font-size: 12px;
+      }
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+
+      .user-card {
+        padding: 14px 16px;
+      }
+    }
+
+    .provider-reviews-section {
+      margin-top: 40px;
+      padding-top: 28px;
+
+      h3 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .booking-option {
+    padding: 40px;
+  }
+}

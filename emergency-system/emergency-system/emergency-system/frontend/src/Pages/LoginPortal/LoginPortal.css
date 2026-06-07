@@ -1,0 +1,268 @@
+.emergency-portal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+
+  .portal-container {
+    width: 100%;
+    max-width: 550px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-top: 6px solid #e63946; /* Emergency Red */
+
+    .portal-header {
+      text-align: center;
+      margin-bottom: 30px;
+
+      .icon-badge {
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 26px;
+        color: #1a1a1a;
+        font-weight: 800;
+        margin: 0;
+      }
+
+      p {
+        color: #6c757d;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    }
+
+    .portal-tabs {
+      display: flex;
+      background: #f1f3f5;
+      padding: 6px;
+      border-radius: 14px;
+      margin-bottom: 30px;
+      gap: 5px;
+
+      button {
+        flex: 1;
+        padding: 14px;
+        border: none;
+        background: transparent;
+        font-weight: 700;
+        font-size: 15px;
+        color: #495057;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        &.active {
+          background: #ffffff;
+          color: #e63946;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        &:hover:not(.active) {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .portal-content {
+      animation: slideUp 0.4s ease-out;
+      /* Yahan aapka AdminLogin ya UserLogin load hoga */
+    }
+
+    .portal-footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      text-align: center;
+      
+      p {
+        font-size: 13px;
+        color: #6c757d;
+        strong { color: #e63946; }
+      }
+    }
+  }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .emergency-portal-wrapper {
+    padding: 15px;
+
+    .portal-container {
+      max-width: 100%;
+      padding: 20px;
+      border-top-width: 5px;
+
+      .portal-header {
+        margin-bottom: 20px;
+
+        .icon-badge {
+          font-size: 32px;
+          margin-bottom: 12px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 12px;
+          margin-top: 6px;
+        }
+      }
+
+      .portal-tabs {
+        padding: 5px;
+        margin-bottom: 20px;
+        gap: 4px;
+
+        button {
+          padding: 10px;
+          font-size: 12px;
+          gap: 4px;
+        }
+      }
+
+      .portal-footer {
+        margin-top: 20px;
+        padding-top: 15px;
+
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .emergency-portal-wrapper {
+    padding: 16px;
+
+    .portal-container {
+      max-width: 100%;
+      padding: 24px;
+      border-top-width: 5px;
+
+      .portal-header {
+        margin-bottom: 22px;
+
+        .icon-badge {
+          font-size: 36px;
+          margin-bottom: 13px;
+        }
+
+        h2 {
+          font-size: 22px;
+        }
+
+        p {
+          font-size: 13px;
+          margin-top: 7px;
+        }
+      }
+
+      .portal-tabs {
+        padding: 6px;
+        margin-bottom: 24px;
+        gap: 5px;
+
+        button {
+          padding: 12px;
+          font-size: 13px;
+          gap: 6px;
+        }
+      }
+
+      .portal-footer {
+        margin-top: 24px;
+        padding-top: 16px;
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .emergency-portal-wrapper {
+    padding: 18px;
+
+    .portal-container {
+      max-width: 500px;
+      padding: 32px;
+      border-top-width: 6px;
+
+      .portal-header {
+        margin-bottom: 26px;
+
+        .icon-badge {
+          font-size: 40px;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 8px;
+        }
+      }
+
+      .portal-tabs {
+        padding: 6px;
+        margin-bottom: 28px;
+        gap: 5px;
+
+        button {
+          padding: 13px;
+          font-size: 14px;
+          gap: 7px;
+        }
+      }
+
+      .portal-footer {
+        margin-top: 28px;
+        padding-top: 18px;
+
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .emergency-portal-wrapper {
+    .portal-container {
+      max-width: 550px;
+    }
+  }
+}

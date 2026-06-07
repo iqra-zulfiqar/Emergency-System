@@ -1,0 +1,144 @@
+.footerContainer {
+  background-color: #0a0a23;
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
+}
+
+.footerSection {
+  min-width: 180px;
+}
+
+.footerSection h1 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #4da3ff;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    a {
+      color: white;
+      text-decoration: none;
+      :hover {
+        color: #4da3ff;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+/* Bottom Bar */
+.footerBottom {
+  background-color: #08081a;
+  color: #ccc;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .footerContainer {
+    padding: 24px 10px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footerSection {
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .footerSection h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .footerSection ul li {
+    margin: 6px 0;
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    padding: 10px 10px;
+    font-size: 11px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .footerContainer {
+    padding: 28px 12px;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .footerSection {
+    min-width: 140px;
+    text-align: center;
+  }
+
+  .footerSection h1 {
+    font-size: 17px;
+    margin-bottom: 11px;
+  }
+
+  .footerSection ul li {
+    margin: 7px 0;
+    font-size: 13px;
+  }
+
+  .footerBottom {
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .footerContainer {
+    padding: 32px 15px;
+    justify-content: space-around;
+    gap: 24px;
+  }
+
+  .footerSection {
+    min-width: 160px;
+    text-align: left;
+  }
+
+  .footerSection h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .footerSection ul li {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .footerBottom {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .footerContainer {
+    padding: 40px 20px;
+  }
+}

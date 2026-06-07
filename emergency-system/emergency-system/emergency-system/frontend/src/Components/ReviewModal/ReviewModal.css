@@ -1,0 +1,276 @@
+.review-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.review-modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.review-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  color: #868e96;
+}
+
+.review-modal h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.review-modal-subtitle {
+  color: #6c757d;
+  font-size: 14px;
+  margin: 0 0 20px;
+  text-transform: capitalize;
+}
+
+.review-modal label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.star-rating {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.star-btn {
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  color: #dee2e6;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.star-btn.active {
+  color: #fab005;
+}
+
+.review-modal textarea {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+.review-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.review-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.review-error {
+  color: #e03131;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .review-modal-overlay {
+    padding: 12px;
+  }
+
+  .review-modal {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .review-modal-close {
+    font-size: 20px;
+    top: 10px;
+    right: 12px;
+  }
+
+  .review-modal h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .review-modal-subtitle {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .review-modal label {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+
+  .star-rating {
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+
+  .star-btn {
+    font-size: 26px;
+  }
+
+  .review-modal textarea {
+    padding: 10px;
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .review-submit-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .review-modal-overlay {
+    padding: 14px;
+  }
+
+  .review-modal {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .review-modal-close {
+    font-size: 22px;
+    top: 11px;
+    right: 13px;
+  }
+
+  .review-modal h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .review-modal-subtitle {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .review-modal label {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+
+  .star-rating {
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  .star-btn {
+    font-size: 28px;
+  }
+
+  .review-modal textarea {
+    padding: 11px;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .review-submit-btn {
+    padding: 11px;
+    font-size: 14px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .review-modal-overlay {
+    padding: 16px;
+  }
+
+  .review-modal {
+    max-width: 100%;
+    padding: 28px;
+  }
+
+  .review-modal-close {
+    font-size: 24px;
+    top: 12px;
+    right: 14px;
+  }
+
+  .review-modal h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .review-modal-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .review-modal label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .star-rating {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .star-btn {
+    font-size: 32px;
+  }
+
+  .review-modal textarea {
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .review-submit-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .review-modal {
+    max-width: 440px;
+  }
+}

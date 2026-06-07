@@ -1,0 +1,202 @@
+/* Container */
+.blog-container {
+  width: 90%;
+  max-width: 800px; /* smaller max-width for better readability */
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 0;
+}
+
+/* Titles */
+.blog-title {
+  font-size: 42px;
+  text-align: center;
+  color: #0f4c81;
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Blog list grid */
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr; /* one card per row */
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Blog cards */
+.blog-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left; /* align text to left for better reading */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card h2 {
+  margin-bottom: 12px;
+  color: #0f4c81;
+  font-size: 26px;
+}
+
+.blog-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media(max-width: 992px) {
+  .blog-title {
+    font-size: 34px;
+  }
+  .blog-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 600px) {
+  .blog-title {
+    font-size: 26px;
+  }
+  .blog-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .blog-card h2 {
+    font-size: 22px;
+  }
+}
+
+/* ================= ENHANCED MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .blog-container {
+    width: 95%;
+    padding: 25px 0;
+  }
+
+  .blog-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .blog-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .blog-list {
+    gap: 15px;
+  }
+
+  .blog-card {
+    padding: 16px;
+  }
+
+  .blog-card h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .blog-card p {
+    font-size: 12px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .blog-container {
+    width: 95%;
+    max-width: 100%;
+    padding: 30px 0;
+  }
+
+  .blog-title {
+    font-size: 26px;
+    margin-bottom: 9px;
+  }
+
+  .blog-subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .blog-list {
+    gap: 18px;
+  }
+
+  .blog-card {
+    padding: 18px;
+  }
+
+  .blog-card h2 {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+
+  .blog-card p {
+    font-size: 13px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .blog-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 35px 0;
+  }
+
+  .blog-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .blog-subtitle {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .blog-list {
+    gap: 20px;
+  }
+
+  .blog-card {
+    padding: 22px;
+  }
+
+  .blog-card h2 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .blog-card p {
+    font-size: 14px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .blog-container {
+    max-width: 800px;
+  }
+}

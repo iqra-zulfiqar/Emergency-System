@@ -1,0 +1,304 @@
+/* CONTAINER */
+.tracking-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* TITLE */
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* STATUS CARD */
+.tracking-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tracking-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e63946;
+}
+
+.tracking-error {
+  margin-top: 10px;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.tracking-booking-info {
+  margin-bottom: 20px;
+}
+
+.tracking-cta-btn {
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #e63946;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tracking-cta-btn:hover {
+  background: #c1121f;
+}
+
+/* MAP */
+.map-container {
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* INFO BOX */
+.info-box {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.info-box p {
+  margin: 5px 0;
+  color: #444;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .tracking-container {
+    margin: 15px auto;
+    padding: 8px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .tracking-card {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .tracking-card h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .status {
+    font-size: 14px;
+  }
+
+  .tracking-error {
+    font-size: 12px;
+  }
+
+  .map-container {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+
+  .info-box {
+    padding: 12px;
+  }
+
+  .info-box h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .info-box p {
+    font-size: 12px;
+    margin: 4px 0;
+  }
+
+  .tracking-cta-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .tracking-container {
+    margin: 18px auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .tracking-card {
+    padding: 14px;
+    margin-bottom: 18px;
+  }
+
+  .tracking-card h2 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .status {
+    font-size: 15px;
+  }
+
+  .tracking-error {
+    font-size: 12px;
+  }
+
+  .map-container {
+    height: 280px;
+    margin-bottom: 18px;
+  }
+
+  .info-box {
+    padding: 13px;
+  }
+
+  .info-box h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  .tracking-cta-btn {
+    padding: 9px 15px;
+    font-size: 13px;
+    margin-top: 9px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .tracking-container {
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .tracking-card {
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .tracking-card h2 {
+    font-size: 18px;
+    margin-bottom: 9px;
+  }
+
+  .status {
+    font-size: 16px;
+  }
+
+  .tracking-error {
+    font-size: 13px;
+  }
+
+  .map-container {
+    height: 320px;
+    margin-bottom: 18px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+
+  .info-box h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
+
+  .info-box p {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+
+  .tracking-cta-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .tracking-container {
+    padding: 15px;
+  }
+
+  .map-container {
+    height: 380px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tracking-container {
+    margin: 25px auto;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .tracking-card {
+    padding: 18px;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+}

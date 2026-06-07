@@ -1,0 +1,164 @@
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+/* ONE SECTION PER ROW */
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* BIG FULL-WIDTH CARD */
+.about-card {
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .about-container {
+    padding: 20px 12px;
+  }
+
+  .about-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .about-text {
+    font-size: 13px;
+    margin: 0 auto 24px;
+  }
+
+  .about-list {
+    gap: 18px;
+  }
+
+  .about-card {
+    padding: 16px;
+  }
+
+  .about-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .about-card p {
+    font-size: 13px;
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .about-container {
+    padding: 24px 13px;
+  }
+
+  .about-title {
+    font-size: 26px;
+    margin-bottom: 13px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    margin: 0 auto 28px;
+  }
+
+  .about-list {
+    gap: 20px;
+  }
+
+  .about-card {
+    padding: 18px;
+  }
+
+  .about-card h2 {
+    font-size: 20px;
+    margin-bottom: 11px;
+  }
+
+  .about-card p {
+    font-size: 14px;
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .about-container {
+    padding: 30px 16px;
+  }
+
+  .about-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 15px;
+    margin: 0 auto 32px;
+  }
+
+  .about-list {
+    gap: 24px;
+  }
+
+  .about-card {
+    padding: 22px;
+  }
+
+  .about-card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .about-card p {
+    font-size: 15px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .about-container {
+    max-width: 1100px;
+  }
+}

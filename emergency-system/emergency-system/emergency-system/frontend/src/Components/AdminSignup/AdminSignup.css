@@ -1,0 +1,340 @@
+.admin-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+
+  .admin-signup-form {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 650px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2d3436;
+      font-weight: 800;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px; /* Gap barha diya taake error ki jagah banay */
+      margin-bottom: 20px;
+
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 18px; /* Error message ke liye reserved space */
+
+        input {
+          padding: 12px 15px;
+          border: 1px solid #dfe6e9;
+          border-radius: 8px;
+          font-size: 14px;
+          transition: all 0.3s ease;
+          width: 100%;
+          box-sizing: border-box;
+
+          &:focus {
+            border-color: #e63946;
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+            outline: none;
+          }
+
+          /* Jab error ho to input border red ho jaye */
+          &.input-error {
+            border-color: #d63031;
+            background-color: #fff5f5;
+          }
+        }
+
+        .error {
+          color: #d63031;
+          font-size: 12px;
+          font-weight: 600;
+          position: absolute;
+          bottom: 2px;
+          left: 5px;
+        }
+      }
+    }
+
+    .cv-upload-section {
+      margin-bottom: 20px;
+      margin-top: 20px;
+
+      .cv-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: #2d3436;
+        margin-bottom: 12px;
+      }
+
+      .cv-upload-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px;
+        border: 2px dashed #dfe6e9;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: #e63946;
+          background-color: #fff5f5;
+        }
+
+        .cv-file-input {
+          display: none;
+        }
+
+        .browse-btn {
+          padding: 8px 16px;
+          background-color: #e63946;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 14px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+
+          &:hover {
+            background-color: #c1121f;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(230, 57, 70, 0.3);
+          }
+        }
+
+        .file-name {
+          color: #6c757d;
+          font-size: 14px;
+          flex: 1;
+          word-break: break-word;
+        }
+      }
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+
+      &:hover {
+        background-color: #c1121f;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+    .signup-footer {
+      margin-top: 25px;
+      text-align: center;
+
+      p {
+        font-size: 14px;
+        color: #6c757d;
+
+        span {
+          color: #e63946;
+          font-weight: 700;
+          cursor: pointer;
+          margin-left: 5px;
+          transition: border-bottom 0.2s;
+
+          &:hover {
+            border-bottom: 2px solid #e63946;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+  .admin-signup-container {
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 20px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 18px;
+
+        label {
+          font-size: 12px;
+          margin-bottom: 6px;
+        }
+
+        input, select {
+          padding: 9px 12px;
+          font-size: 13px;
+        }
+
+        .error-msg {
+          font-size: 11px;
+          margin-top: 4px;
+        }
+      }
+
+      button {
+        padding: 11px;
+        font-size: 13px;
+        margin-top: 12px;
+      }
+    }
+
+    .signup-footer {
+      margin-top: 18px;
+
+      p {
+        font-size: 12px;
+
+        span {
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+  .admin-signup-container {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 22px;
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 22px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 19px;
+
+        label {
+          font-size: 13px;
+          margin-bottom: 7px;
+        }
+
+        input, select {
+          padding: 10px 12px;
+          font-size: 14px;
+        }
+
+        .error-msg {
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+
+      button {
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 13px;
+      }
+    }
+
+    .signup-footer {
+      margin-top: 19px;
+
+      p {
+        font-size: 13px;
+
+        span {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+  .admin-signup-container {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 28px;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        input, select {
+          padding: 11px 13px;
+          font-size: 15px;
+        }
+
+        .error-msg {
+          font-size: 12px;
+          margin-top: 6px;
+        }
+      }
+
+      button {
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 16px;
+      }
+    }
+
+    .signup-footer {
+      margin-top: 22px;
+
+      p {
+        font-size: 14px;
+
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* Tablets */
+@media (min-width: 571px) {
+  .admin-signup-container {
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,81 @@
+.admin-con{
+    width: 100%;
+    display: flex;
+
+
+    .left{
+        width: 20%;
+    }
+    .right{
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+/* Extra Small Phones (300px - 374px) */
+@media (max-width: 374px) {
+    .admin-con {
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .right {
+            width: 100%;
+            padding: 8px;
+        }
+    }
+}
+
+/* Small Phones (375px - 413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    .admin-con {
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .right {
+            width: 100%;
+            padding: 9px;
+        }
+    }
+}
+
+/* Mid-Range Phones (414px - 570px) */
+@media (min-width: 414px) and (max-width: 570px) {
+    .admin-con {
+        flex-direction: column;
+
+        .left {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        .right {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
+
+/* Tablets */
+@media (min-width: 571px) and (max-width: 900px) {
+    .admin-con {
+        flex-direction: row;
+
+        .left {
+            width: 25%;
+        }
+
+        .right {
+            width: 75%;
+        }
+    }
+}
