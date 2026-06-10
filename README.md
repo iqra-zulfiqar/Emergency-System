@@ -1,22 +1,22 @@
 # Emergency Service Platform – Live Tracking System 🚑📍
 
-A **client-based MERN stack project** featuring a real-time live tracking system for emergency service management, where users can track assigned service providers after booking a request.
+A MERN stack-based real-time tracking system where users can track assigned service providers after booking a service request.
 
 ---
 
 ## 🚀 Overview
 
-This system enables secure **booking-based real-time tracking** between users and service providers using Socket.IO. Location sharing is restricted only to assigned sessions to ensure privacy and accuracy.
+Built a secure **booking-based live tracking system** using Socket.IO, enabling real-time location sharing only between assigned users and service providers.
 
 ---
 
 ## ⚡ Key Features
 
 * 📍 Real-time live location tracking
-* 🔐 Secure booking-based tracking system
-* 👤 Users track only assigned providers
-* 🟢 Provider shares live location after acceptance
-* 🛑 Automatic tracking stop after service completion
+* 🔐 Booking-based secure tracking system
+* 👤 User can track only assigned provider
+* 🟢 Provider shares location after accepting request
+* 🛑 Auto stop tracking after completion
 * ⭐ Review & rating system after service
 
 ---
@@ -25,14 +25,13 @@ This system enables secure **booking-based real-time tracking** between users an
 
 ### 👤 User Dashboard
 
-* Book emergency/service requests
-* Track assigned provider in real time
-* Submit reviews and ratings
+* Book service requests
+* Track provider in real-time
+* Submit reviews after completion
 
-### 🧑‍🔧 Service Provider Dashboard
+### 🧑‍🔧 Provider Dashboard
 
-* Manage incoming requests
-* Accept/reject bookings
+* Accept/reject requests
 * Share live location during service
 * Update service status
 
@@ -48,22 +47,16 @@ This system enables secure **booking-based real-time tracking** between users an
 
 ---
 
-## 📌 Project Type
-
-* 👨‍💼 Client Project
-* 🔧 Production-focused real-time system
-
----
-
 ## 🧠 Key Learning
 
-* Real-time architecture using Socket.IO rooms
-* Role-based system design (User & Provider)
-* Secure geolocation data handling
-* Building production-grade tracking systems
+* Real-time system design with Socket.IO rooms
+* Role-based dashboards (User & Provider)
+* Secure live location sharing
+* Booking-based architecture
 
 ---
 
 ## 📄 License
 
-Client project (confidential implementation details not included)
+Portfolio / learning project
+
